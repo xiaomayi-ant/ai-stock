@@ -12,17 +12,17 @@
   "author": "Brace Sproul",
   "license": "MIT",
   "dependencies": {
-    "@langchain/community": "^0.2.31",
-    "@langchain/core": "^0.2.31",
-    "@langchain/langgraph": "^0.2.1",
-    "@langchain/openai": "^0.2.8",
-    "zod": "^3.23.8"
+    "@langchain/community": "^0.3.24",
+    "@langchain/core": "^0.3.29",
+    "@langchain/langgraph": "^0.2.39",
+    "@langchain/openai": "^0.3.17",
+    "zod": "^3.24.1"
   },
   "devDependencies": {
-    "@tsconfig/recommended": "^1.0.2",
-    "dotenv": "^16.0.3",
-    "prettier": "^2.8.3",
-    "tsx": "^4.19.0",
-    "typescript": "^5.0.0"
+    "@tsconfig/recommended": "^1.0.8",
+    "dotenv": "^16.4.7",
+    "prettier": "^3.4.2",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.3"
   }
 }

@@ -2,8 +2,7 @@
 
 import { TransactionConfirmationPending } from "./transaction-confirmation-pending";
 import { TransactionConfirmationFinal } from "./transaction-confirmation-final";
-import { makeAssistantToolUI, useThreadContext } from "@assistant-ui/react";
-import { updateState } from "@/lib/chatApi";
+import { makeAssistantToolUI } from "@assistant-ui/react";
 
 type PurchaseStockArgs = {
   ticker: string;
@@ -21,11 +20,7 @@ type PurchaseStockResult = {
 export const PurchaseStockTool = makeAssistantToolUI<PurchaseStockArgs, string>(
   {
     toolName: "purchase_stock",
-    render: function PurchaseStockUI({
-      part: { args, result },
-      status,
-      addResult,
-    }) {
+    render: function PurchaseStockUI({ args, result, status, addResult }) {
       let resultObj: PurchaseStockResult;
       try {
         resultObj = result ? JSON.parse(result) : {};
