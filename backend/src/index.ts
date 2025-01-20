@@ -261,8 +261,10 @@ const workflow = new StateGraph(GraphAnnotation)
     "prepare_purchase_details",
   ]);
 
-export const graph = workflow.compile({
+const graph = workflow.compile({
   // The LangGraph Studio/Cloud API will automatically add a checkpointer
   // only uncomment if running locally
   // checkpointer: new MemorySaver(),
 });
+
+export {graph as workflow};

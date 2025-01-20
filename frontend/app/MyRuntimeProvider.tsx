@@ -13,6 +13,7 @@ export function MyRuntimeProvider({
   const threadIdRef = useRef<string | undefined>();
   const runtime = useLangGraphRuntime({
     threadId: threadIdRef.current,
+    skipCompleteEvent: true,
     stream: async (messages) => {
       if (!threadIdRef.current) {
         const { thread_id } = await createThread();
